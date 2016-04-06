@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CORE2016P3</title>
+<meta charset="utf-8">
+<script type="text/javascript"
+		src="jquery-2.1.4.js" > 
+	</script>
+<link href="estiloM3.css">
+<script type="text/javascript">
+$(function() {
+
+	var aux=0; 
+	var oper="";
+	var x=0;
+	var y=0;
+
+	$("#pantalla").on("click",
+		function(){$("#pantalla").val("");}
+		);
+	$("#cuadrado").on("click",
+		function() {
+			var num=$("#pantalla");
+			num.val(num.val()*num.val());
+		}
+	);
+	
+	$("#limpiar").on("click",
+		function(){
+			aux=0;
+			oper="";
+			x=0;
+			y=0;
+			$("#pantalla").val("");}
+		);
+});
+</script>
+</head>
+<body>
+	<header><h1> Buenos días, bienvenido a la calculadora de Antonio Martín García (<a href="mailto:antonio.martin.garcia@alumnos.upm.es">antonio.martin.garcia@alumnos.upm.es</a>)
+	</h1></header>
+	<h2 id="main">
+	 Número:
+	 <input type="text" id= "pantalla">
+	
+	 <button id="cuadrado">x<sup>2</sup></button>
+	
+	 <button id="limpiar">Limpiar</button>
+	 </h2>
+	 
+	 <table id="lista"><title>Lista de resultados</title>
+	 	<tr>
+	 		<td>Resultados</td>
+	 		<td>Fecha</td>
+	 	</tr>
+	 	</table>
+</body>
+
+</html>
