@@ -18,6 +18,12 @@ $(function() {
 	$("#pantalla").on("click",
 		function(){$("#pantalla").val("");}
 		);
+	$("#cubo").on("click",
+		function(){
+			var num=$("#pantalla");
+			num.val(num.val()*num.val()*num.val());
+		}
+	);
 	$("#cuadrado").on("click",
 		function() {
 			var num=$("#pantalla");
@@ -44,7 +50,7 @@ $(function() {
 	 <input type="text" id= "pantalla">
 	
 	 <button id="cuadrado">x<sup>2</sup></button>
-	
+	<button id="cubo">x<sup>3</sup></button>	
 	 <button id="limpiar">Limpiar</button>
 	 </h2>
 	 
